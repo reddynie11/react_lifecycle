@@ -20,12 +20,23 @@ class Life extends React.Component{
     componentWillMount(){
         console.log('Step3: Before rendering');
     }
+    componentWillUpdate(){
+        console.log('before state update');
+    }
+
 
     //step4
     render(){
         console.log(this.props);
         return(
-            <div>{this.state.title}</div>
+            <div>
+            {this.state.title}
+            <div onClick={()=>{this.setState({title:'New State Data'})}}>
+                click
+            </div>
+            
+            </div>
+
         )
     }
     //step5
