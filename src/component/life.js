@@ -21,7 +21,10 @@ class Life extends React.Component{
         console.log('Step3: Before rendering');
     }
     componentWillUpdate(){
-        console.log('before state update');
+        console.log('before component update from state');
+    }
+    componentDidUpdate(){
+        console.log('after component update from state');
     }
 
 
